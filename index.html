@@ -6,21 +6,17 @@
   <title>Irene Cho | Cloud Engineer Portfolio</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
       background: #f5f7fa;
       color: #2e2e2e;
     }
-
-    /* HEADER */
     header {
       background: linear-gradient(135deg, #1a3a5c, #2e75b6);
       color: white;
       padding: 60px 20px 50px;
       text-align: center;
     }
-
     header img {
       width: 110px;
       height: 110px;
@@ -29,13 +25,11 @@
       margin-bottom: 18px;
       object-fit: cover;
     }
-
     header h1 {
       font-size: 2rem;
       font-weight: 700;
       margin-bottom: 6px;
     }
-
     header p.tagline {
       font-size: 1rem;
       opacity: 0.88;
@@ -43,14 +37,12 @@
       margin: 0 auto 22px;
       line-height: 1.6;
     }
-
     .header-links {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
     }
-
     .header-links a {
       color: white;
       text-decoration: none;
@@ -60,16 +52,12 @@
       font-size: 0.85rem;
       transition: background 0.2s;
     }
-
     .header-links a:hover { background: rgba(255,255,255,0.15); }
-
-    /* SECTIONS */
     section {
       max-width: 860px;
       margin: 0 auto;
       padding: 50px 20px;
     }
-
     section h2 {
       font-size: 1.3rem;
       font-weight: 700;
@@ -80,14 +68,11 @@
       padding-bottom: 8px;
       margin-bottom: 28px;
     }
-
-    /* PROJECTS */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 22px;
     }
-
     .project-card {
       background: white;
       border-radius: 10px;
@@ -98,31 +83,26 @@
       gap: 12px;
       transition: transform 0.2s, box-shadow 0.2s;
     }
-
     .project-card:hover {
       transform: translateY(-3px);
       box-shadow: 0 6px 20px rgba(0,0,0,0.11);
     }
-
     .project-card h3 {
       font-size: 1rem;
       font-weight: 700;
       color: #1a3a5c;
     }
-
     .project-card p {
       font-size: 0.88rem;
       line-height: 1.6;
       color: #555;
       flex-grow: 1;
     }
-
     .tech-stack {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
     }
-
     .tech-tag {
       background: #e8f0fb;
       color: #2e75b6;
@@ -131,13 +111,11 @@
       border-radius: 12px;
       font-weight: 600;
     }
-
     .project-links {
       display: flex;
       gap: 10px;
       margin-top: 4px;
     }
-
     .project-links a {
       font-size: 0.82rem;
       color: #2e75b6;
@@ -148,30 +126,15 @@
       border-radius: 5px;
       transition: background 0.2s, color 0.2s;
     }
-
     .project-links a:hover {
       background: #2e75b6;
       color: white;
     }
-
-    .badge-in-progress {
-      display: inline-block;
-      background: #fff3cd;
-      color: #856404;
-      font-size: 0.72rem;
-      padding: 2px 8px;
-      border-radius: 10px;
-      font-weight: 600;
-      margin-left: 6px;
-    }
-
-    /* CERTIFICATIONS */
     .certs-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
     }
-
     .cert-card {
       background: white;
       border-radius: 10px;
@@ -183,33 +146,28 @@
       min-width: 260px;
       flex: 1;
     }
-
     .cert-logo {
       width: 56px;
       height: 56px;
       object-fit: contain;
       flex-shrink: 0;
     }
-
     .cert-info h4 {
       font-size: 0.92rem;
       font-weight: 700;
       color: #1a3a5c;
       margin-bottom: 3px;
     }
-
     .cert-info p {
       font-size: 0.8rem;
       color: #777;
     }
-
     .cert-info a {
       font-size: 0.78rem;
       color: #2e75b6;
       text-decoration: none;
       font-weight: 600;
     }
-
     .cert-pending {
       font-size: 0.75rem;
       color: #856404;
@@ -220,8 +178,6 @@
       display: inline-block;
       margin-top: 4px;
     }
-
-    /* FOOTER */
     footer {
       text-align: center;
       padding: 30px 20px;
@@ -229,11 +185,15 @@
       color: #aaa;
       border-top: 1px solid #e5e5e5;
     }
+    @media (max-width: 640px) {
+      header h1 { font-size: 1.5rem; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .certs-grid { flex-direction: column; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
   <header>
     <img src="https://irbcho.github.io/professionalhub/assets/profile.png" alt="Irene Cho" />
     <h1>Irene Cho</h1>
@@ -244,18 +204,16 @@
       <a href="https://www.linkedin.com/in/irene-b-c" target="_blank">LinkedIn</a>
       <a href="https://github.com/IRBCHO" target="_blank">GitHub</a>
       <a href="https://www.credly.com/users/irenecho" target="_blank">Credly</a>
-      <a href="https://irbcho.github.io/organicgoods/" target="_blank">OrganicGoods Project</a>
     </div>
   </header>
 
-  <!-- PROJECTS -->
   <section>
     <h2>Projects</h2>
     <div class="projects-grid">
 
       <div class="project-card">
-        <h3>AI Resume Analyzer <span class="badge-in-progress">In Progress</span></h3>
-        <p>A serverless cloud application that analyzes resumes using AI and returns feedback to help job seekers improve their applications. Built to apply AWS Well-Architected Framework principles across a real, end-to-end cloud architecture.</p>
+        <h3>AI Resume Analyzer</h3>
+        <p>A serverless cloud application that analyzes resumes using AI and returns a match score, strengths, gaps, and improvement suggestions. Built using AWS Well-Architected Framework principles across a real, end-to-end cloud architecture.</p>
         <div class="tech-stack">
           <span class="tech-tag">Amazon Bedrock</span>
           <span class="tech-tag">AWS Lambda</span>
@@ -265,28 +223,29 @@
           <span class="tech-tag">Python</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/IRBCHO" target="_blank">GitHub</a>
+          <a href="https://irbcho.github.io/AI-Resume-Analyzer/" target="_blank">Live Demo</a>
+          <a href="https://github.com/IRBCHO/AI-Resume-Analyzer" target="_blank">GitHub</a>
         </div>
       </div>
 
       <div class="project-card">
-        <h3>AWS Cloud Migration Lab</h3>
-        <p>Simulated a real-world database migration from on-premises infrastructure to Amazon RDS using AWS DMS. Documented the full process including schema setup, data validation, testing, and troubleshooting to produce a repeatable migration runbook.</p>
+        <h3>AWS EC2 Web Server</h3>
+        <p>Launched and configured an EC2 instance on AWS, set up security groups for SSH and HTTP access, connected via EC2 Instance Connect, installed Nginx, and deployed a custom HTML webpage — demonstrating end-to-end cloud infrastructure setup on Linux.</p>
         <div class="tech-stack">
-          <span class="tech-tag">Amazon RDS</span>
-          <span class="tech-tag">AWS DMS</span>
-          <span class="tech-tag">SQL</span>
-          <span class="tech-tag">AWS IAM</span>
-          <span class="tech-tag">VPC</span>
+          <span class="tech-tag">AWS EC2</span>
+          <span class="tech-tag">Linux</span>
+          <span class="tech-tag">Nginx</span>
+          <span class="tech-tag">Security Groups</span>
+          <span class="tech-tag">SSH</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/IRBCHO" target="_blank">GitHub</a>
+          <a href="https://github.com/IRBCHO/aws-EC2-web-server" target="_blank">GitHub</a>
         </div>
       </div>
 
       <div class="project-card">
         <h3>Meal Planner &amp; Grocery Generator</h3>
-        <p>A Python desktop application that solves the problem of meal planning and grocery budgeting by generating 7-day meal plans, calculating nutrition and cost automatically, and producing a grocery list — all from a single interface.</p>
+        <p>A Python desktop application that solves the problem of meal planning and grocery budgeting by generating 7-day meal plans, calculating nutrition and cost automatically, and producing a grocery list from a single interface.</p>
         <div class="tech-stack">
           <span class="tech-tag">Python</span>
           <span class="tech-tag">Tkinter</span>
@@ -316,7 +275,6 @@
     </div>
   </section>
 
-  <!-- CERTIFICATIONS -->
   <section style="padding-top: 0;">
     <h2>Certifications</h2>
     <div class="certs-grid">
